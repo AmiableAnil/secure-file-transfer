@@ -1,4 +1,4 @@
-import sys 
+import sys
 import uuid
 
 from utils import *
@@ -10,7 +10,7 @@ password = uuid.uuid4().hex
 filename = sys.argv[1]
 publicKeyPath = sys.argv[2]
 
-#This function is invoke the zip the file after copying the file to the current directory
+# This function is invoke the zip the file after copying the file to the current directory
 compressFile(filename)
 
 # Read the zip file (fIn), Create a new file for the encrypted output (fOut)

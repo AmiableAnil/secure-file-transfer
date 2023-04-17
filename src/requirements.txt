@@ -1,8 +1,8 @@
-autopep8==1.5.1
-cffi==1.14.0
-cryptography==2.9
-pyAesCrypt==0.4.3
-pycodestyle==2.5.0
-pycparser==2.20
-pycrypto==2.6.1
-six==1.14.0
+autopep8==2.0.2
+cffi==1.15.1
+cryptography==40.0.2
+pyAesCrypt==6.0.0
+pycodestyle==2.10.0
+pycparser==2.21
+pycryptodome==3.17
+six==1.16.0
