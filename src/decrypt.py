@@ -1,5 +1,5 @@
 import shutil
-import sys 
+import sys
 
 from utils import *
 
@@ -10,7 +10,7 @@ privateKeyPassphrase = sys.argv[3]
 # Read the encrypted file (fIn) 
 with open(filename, 'rb') as fIn:
     # Read the first line of the file that contains the password encrypted using the 
-    # equivalent public key and decrypt to retrive the password
+    # equivalent public key and decrypt to retrieve the password
     cipherText = fIn.readline().decode('UTF-8')
     password = decryptDataUsingPrivateKey(cipherText, privateKeyPath, privateKeyPassphrase)
 
@@ -23,7 +23,7 @@ with open(filename, 'rb') as fIn:
         with open(filename + 'retrieved.zip', "wb") as fOut:
             decryptFileWithAESKey(filename + '.crypt', cipherIn, fOut, password)
 
-# Uncomment the uncompressFile invocation if you want to retrive the contents of the zip.
+# Uncomment the uncompressFile invocation if you want to retrieve the contents of the zip.
 # I have left this commented as it will override the input file.
 uncompressFile(filename + 'retrieved.zip')
 remove(filename + '.crypt')
